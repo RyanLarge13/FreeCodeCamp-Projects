@@ -1,0 +1,356 @@
+/* begin default styling */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* background-color: black; */
+    background-image: linear-gradient(45deg, black 85%, aqua 90%, white 100%);
+    background-repeat: repeat;
+    color: white;
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+    text-shadow: 0 0 .3em aqua;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* begin nav bar styling */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    box-shadow: inset 0 .1em .5em .1em aqua,
+    0 .1em .5em .1em aqua;
+    z-index: 999;
+    border-radius: 1em;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    padding: 1em 2em;
+    transition: 250ms ease-in-out;
+}
+
+#navbar ul li:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#navbar ul li a {
+    transition: 250ms ease-in-out;
+    padding: 1em;
+}
+
+#navbar ul li a:hover {
+    color: aqua;
+    text-shadow: 0 0 .3em aqua;
+}
+
+#navbar ul li ul {
+    display: block;
+    position: absolute;
+    width: 22em;
+    transform: scale(1, 0);
+    transition: 250ms ease-in-out;
+    transform-origin: top;
+    margin-left: -2em;
+    margin-top: 1em;
+    background-color: black;
+    box-shadow: inset 0 .1em .5em .1em aqua,
+    0 .1em .5em .1em aqua;
+    border-radius: 1em;
+}
+
+#navbar ul li ul li {
+    width: 100%;
+}
+
+#navbar ul li ul li a {
+    width: 100%;
+}
+
+#navbar ul li:nth-child(4):hover ul {
+    transform: scale(1, 1);
+}
+
+/* begin welcome section */
+
+#welcome-section {
+    height: 100vh;
+    margin-top: 10em;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    text-shadow: 0 0 .3em aqua;
+}
+
+h1 {
+    position: relative;
+    text-shadow: 0 0 .3em aqua;
+    box-shadow: inset 0 .1em .5em .1em aqua,
+    0 .1em .5em .1em aqua; 
+    width: fit-content;
+    margin: auto;
+    padding: 1em;
+    border-radius: 1em;
+    transition: 80ms ease-in;
+}
+
+h1:hover {
+    background: aqua;
+    color: black;
+    box-shadow: inset 0 0em 1em .5em aqua,
+    0 0em 1em .5em aqua;
+    cursor: default;
+}
+
+h1:hover::after {
+    opacity: 1;
+    transition: 80ms ease-in;
+}
+
+
+h1::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: aqua;
+    right: 0;
+    margin-top: 3.5em;
+    transform: perspective(5em) rotateX(75deg);
+    opacity: .6;
+    filter: blur(1.5em);
+    pointer-events: none;
+}
+
+/* begin projects section */
+
+#projects h2 {
+    text-align: center;
+    text-shadow: 0 0 .3em aqua;
+    margin-bottom: 4em;
+    position: relative;
+}
+
+/* #projects h2::after {
+    content: "Here are my projects!";
+    color: black;
+    font-weight: bolder;
+    background-color: aqua;
+    position: absolute;
+    display: flex;
+    right: 37.5%;
+    transform: perspective(5em) rotateX(65deg);
+    border-radius: 1.5em;
+    filter: blur(.2em);
+    box-shadow: .1em 0 .1em .1em #FFFFFF;
+    opacity: .6;
+} */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.product-grid a {
+    transition: 250ms ease-in-out;
+    position: relative;
+    border-radius: .5em;
+}
+
+.product-grid a:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: inset 0 .2em .5em .2em aqua,
+    0 .2em .5em .2em aqua;
+}
+
+.product-grid a p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    transform: scale(1, 0);
+    transition: 250ms ease-in-out;
+    transform-origin: bottom;
+    box-shadow: inset 0 .1em .5em .1em aqua,
+    0 .1em .5em .1em aqua;
+    border-radius: .5em;
+}
+
+.product-grid a:hover p {
+    background-color: black;
+    color: white;
+    transform: scale(1, 1);
+}
+
+.project-tile img {
+    width: 15em;
+    height: 15em;
+    box-shadow: inset 0 .1em .5em .1em aqua,
+    0 .1em .5em .1em aqua;
+    border-radius: .5em;
+}
+
+#profile-link {
+    display: block;
+    width: 10%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 0 .3em aqua;
+    box-shadow: inset 0 .1em .5em .1em aqua,
+    0 .1em .5em .1em aqua;
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    font-weight: bold;
+    transition: 100ms ease-in;
+}
+
+#profile-link:hover::after {
+   opacity: 1;
+}
+
+#profile-link::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: aqua;
+    right: 0;
+    margin-top: 3em;
+    transform: perspective(5em) rotateX(75deg);
+    opacity: .7;
+    filter: blur(1.5em);
+    pointer-events: none;
+    transition: 100ms ease-in;
+}
+
+#profile-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 1.5em .5em aqua;
+    border-radius: 1em;
+    opacity: 0;
+    transition: 100ms ease-in;
+}
+
+#profile-link:hover::before {
+    opacity: 1;
+}
+
+#profile-link:hover,
+#profile-link:focus {
+    background-color: aqua;
+    color: black;
+    text-shadow: none;
+    outline: 2px solid aqua;
+}
+
+/* begin footer styling */ 
+
+#footer {
+    background-color: black;
+    box-shadow: inset 0 0 .5em .1em aqua,
+    0 0 .5em .1em aqua;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    row-gap: 4em;
+    margin-top: 7em;
+    clip-path: polygon(10% 0, 90% 0, 100% 50%,
+    100% 100%, 0 100%, 0 50%, 10% 0);
+}
+
+#footer a {
+    margin-top: 5em;
+    position: relative;
+    padding: 1em;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: inset 0 0 .5em .1em aqua,
+    0 0 .5em .1em aqua;
+    transition: 250ms ease-in-out;
+}
+
+#footer a::after {
+    content: '';
+    position: absolute;
+    background-color: aqua;
+    top: 2em;
+    bottom: -2em;
+    right: 0;
+    left: 0;
+    transform: perspective(5em) rotateX(70deg);
+    border-radius: 50%;
+    filter: blur(1em);
+    opacity: .7;
+    transition: 250ms ease-in-out;
+}
+
+#footer a:hover {
+    transform: scale(1.1, 1.1);
+    color: aqua;
+    box-shadow: inset 0 0 .5em .2em aqua,
+    0 0 .5em .2em aqua;
+}
+
+#footer a:hover::after {
+    opacity: 1;
+}
+
+#footer a i {
+    font-size: 1.5em;
+}
+
+#footer p {
+    grid-column: span 6;
+    font-size: .8em;
+    margin-bottom: 1em;
+}
+
+/* begin media query */
+
+@media (max-width: 800px) {
+     .product-grid {
+         grid-template-columns: 1fr;
+         row-gap: 2em;
+     }
+
+     #navbar ul li {
+         padding: 1em 1em;
+     }
+
+     #navbar ul li:hover {
+         transform: scale(1.1, 1.1);
+     }
+
+     #navbar ul li ul {
+         width: 9.2em;
+     }
+}
