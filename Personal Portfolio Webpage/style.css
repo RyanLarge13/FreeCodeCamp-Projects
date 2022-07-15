@@ -343,7 +343,7 @@ h1::after {
      }
 
      #navbar ul li {
-         padding: 1em 1em;
+         padding: 1em .5em;
      }
 
      #navbar ul li:hover {
